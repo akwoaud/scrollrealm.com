@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Caelterra Starter Set",
+    "slug": "starter-set",
+    "image": "product-starter-set.webp",
+    "summary": "A complete entry point into Caelterra TCG, designed for first battles and faction discovery.",
+    "cta": "Learn More",
+    "type": "Starter box",
+    "status": "Coming soon"
+  },
+  {
+    "name": "Caelterra Booster Packs",
+    "slug": "booster-packs",
+    "image": "product-booster-packs.webp",
+    "summary": "Expand your collection with new allies, relics, tactics, and faction-defining cards.",
+    "cta": "View Details",
+    "type": "Card booster",
+    "status": "Coming soon"
+  },
+  {
+    "name": "Caelterra Core Rulebook",
+    "slug": "core-rulebook",
+    "image": "product-core-rulebook.webp",
+    "summary": "The complete TRPG guide for game masters, adventurers, campaigns, and realm exploration.",
+    "cta": "Read More",
+    "type": "TRPG rulebook",
+    "status": "In development"
+  }
+]

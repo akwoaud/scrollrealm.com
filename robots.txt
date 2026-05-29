@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scrollrealm.com/sitemap.xml

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Building Caelterra: World Lore Deep Dive",
+    "slug": "building-caelterra-world-lore-deep-dive",
+    "tag": "Dev Update",
+    "date": "2026-05-28",
+    "image": "news-lore.webp",
+    "summary": "Explore the ancient realms, faction conflicts, and mythic forces that shape the world of Caelterra."
+  },
+  {
+    "title": "Card Preview: Meet the Shadow Courts",
+    "slug": "card-preview-shadow-courts",
+    "tag": "Cards",
+    "date": "2026-05-28",
+    "image": "news-cards.webp",
+    "summary": "A first look at intrigue-focused cards from the Shadow Courts faction."
+  },
+  {
+    "title": "TRPG Quickstart Guide in Development",
+    "slug": "trpg-quickstart-guide-in-development",
+    "tag": "TRPG",
+    "date": "2026-05-28",
+    "image": "news-quickstart.webp",
+    "summary": "A preview of character creation, core actions, and introductory campaign structure."
+  }
+]
