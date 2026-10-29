@@ -1,0 +1,27 @@
+/* v6: readable shared navigation, left logo, right menu. */
+.header-layout{height:94px;display:flex;align-items:center;justify-content:space-between;gap:36px}
+.site-logo{display:block;flex-shrink:0}
+.site-logo img{width:205px;height:auto}
+.desktop-nav{display:flex;align-items:center;gap:27px;margin-left:auto;font-size:15px;line-height:1.5;font-weight:650;white-space:nowrap}
+.desktop-nav>a{padding:12px 0}
+.desktop-nav>a:hover{text-decoration:underline;text-underline-offset:7px}
+.desktop-nav>a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:7px}
+.nav-actions{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.lang-wrap{font-size:11px;padding:8px 11px}
+.site-header .mobile-trigger{display:none}
+.site-header a:focus-visible,.site-header button:focus-visible,.footer a:focus-visible{outline:2px solid #5b9fe6;outline-offset:5px}
+.detail-copy h1{word-break:keep-all}
+@media(min-width:1101px) and (max-width:1250px){.header-layout{gap:25px}.site-logo img{width:190px}.desktop-nav{gap:21px;font-size:14px}}
+@media(max-width:1100px){
+ .header-layout{height:78px;display:flex;gap:20px}
+ .site-logo{justify-self:auto}
+ .site-logo img{width:180px}
+ .desktop-nav{display:none}
+ .nav-actions{margin-left:auto;gap:20px}
+ .site-header .mobile-trigger{display:flex;flex-direction:column;justify-content:space-between;width:24px;height:18px;border:0;background:transparent;padding:2px 0}
+ .mobile-trigger span{height:2px;background:#1f2937;width:100%}
+ .mobile-menu:not([hidden]){display:flex;flex-direction:column;gap:0;border-top:1px solid #e4e5e5;padding:10px 30px 18px;background:#fff}
+ .mobile-menu a{padding:13px 4px;border-bottom:1px solid #f0f1f1;font-size:16px;font-weight:650;line-height:1.5}
+ .mobile-menu a[aria-current="page"]{color:#3778ba}
+}
+@media(max-width:700px){.header-layout{height:72px;gap:18px}.site-logo img{width:157px}.nav-actions{gap:17px}.lang-wrap{font-size:10px;padding:7px 9px}.mobile-menu:not([hidden]){padding:8px 18px 16px}.hero-content h1{font-size:clamp(38px,12vw,54px);letter-spacing:.035em}}
