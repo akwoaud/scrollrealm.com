@@ -1,0 +1,71 @@
+/* Three games share one editorial catalogue row on desktop. */
+.games-catalog-three .sr-game-grid,.home-games-three .two-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.games-catalog-three .sr-game-line{align-items:flex-start;gap:15px}
+.games-catalog-three .sr-game-line h3{font-size:25px}
+.games-catalog-three .sr-circle-link{width:36px;height:36px;margin-top:20px}
+.home-games-three .tile-meta{display:block}
+.home-games-three .tile-meta strong{font-size:19px}
+.home-games-three .tile-meta span{display:block;text-align:left;max-width:none;margin-top:8px;font-size:13px}
+.home-games-three .product-tile figure{aspect-ratio:1.47}
+
+/* Light cover keeps the transparent CMY pieces clear and colourful. */
+.game-cover-color{background:#f6f8fa;color:#1f2937}
+.game-cover-color .caelterra-photo{filter:none;background-position:center top}
+.game-cover-color .caelterra-photo:after{background:linear-gradient(90deg,rgba(246,248,250,.95),rgba(246,248,250,.79) 33%,rgba(246,248,250,.06) 66%)}
+.game-cover-color .eyebrow{color:#626b73}
+.game-cover-color .caelterra-heading h1{font:650 clamp(50px,6vw,80px)/1.12 SUIT,Arial,sans-serif;letter-spacing:-.055em;margin:0 0 23px;word-break:keep-all}
+.game-cover-color .caelterra-heading>p{max-width:430px;color:#4f5963}
+.game-cover-color .game-cover-link{border-bottom-color:#a8b2bc}
+.game-cover-color .game-cover-link:hover{border-bottom-color:#1f2937}
+.game-cover-color a:focus-visible{outline-color:#5b9fe6}
+.color-game-page .game-overview-lead{max-width:820px;color:#626b73;font-size:16px;line-height:1.85;margin:0 0 38px}
+.color-overview article{border-top:1px solid #dfe3e6;padding-top:26px}
+.color-overview .sr-eyebrow{font-size:10px;margin:0 0 15px}
+.color-overview h3{font-size:27px;line-height:1.3}
+.color-overview p:not(.sr-eyebrow){font-size:15px;color:#626b73;line-height:1.85;max-width:560px}
+.color-howto article{border-top:1px solid #dfe3e6;padding-top:23px}
+.color-howto article>span{font-size:12px;color:#7b8790}
+.color-howto h3{font-size:25px;margin:25px 0 13px}
+.color-howto p{font-size:14px;color:#626b73;max-width:340px}
+.color-contents{display:grid;grid-template-columns:1fr 1fr;gap:7%;margin-top:50px;padding-top:35px;border-top:1px solid #dfe3e6}
+.color-contents h3{font-size:29px}
+.color-contents>p{margin:0;font-size:15px;line-height:1.85;color:#626b73}
+@media(max-width:1000px){.games-catalog-three .sr-game-grid,.home-games-three .two-grid{gap:22px}.games-catalog-three .sr-game-line h3{font-size:22px}}
+@media(max-width:900px){.games-catalog-three .sr-game-grid,.home-games-three .two-grid{grid-template-columns:1fr;gap:38px}.games-catalog-three .sr-game-line h3{font-size:25px}.home-games-three .tile-meta strong{font-size:19px}}
+@media(max-width:700px){
+ .game-cover-color{height:650px}
+ .game-cover-color .caelterra-photo{height:330px;background-position:75% top}
+ .game-cover-color .caelterra-photo:after{background:linear-gradient(0deg,#f6f8fa,rgba(246,248,250,0) 42%)}
+ .game-cover-color .caelterra-heading{top:330px}
+ .game-cover-color .caelterra-heading h1{font-size:42px;margin-bottom:18px}
+ .game-cover-color .caelterra-heading>p{font-size:15px;max-width:350px;margin-bottom:20px}
+ .game-cover-color .game-cover-actions{margin-top:23px}
+ .color-game-page .game-overview-lead{font-size:14px;margin-bottom:30px}
+ .color-overview h3{font-size:24px}
+ .color-overview p:not(.sr-eyebrow){font-size:14px}
+ .color-howto h3{font-size:23px;margin-top:19px}
+ .color-contents{grid-template-columns:1fr;gap:23px;margin-top:35px;padding-top:27px}
+ .color-contents h3{font-size:26px}
+ .color-contents>p{font-size:14px}
+}
+
+/* The third featured game uses the same cover rhythm with a light CMY palette. */
+.hero-slide-color{color:#1f2937;background:#f6f8fa}
+.hero-slide-color .hero-backdrop{filter:none;background-position:center 48%}
+.hero-slide-color .hero-backdrop:after{background:linear-gradient(90deg,rgba(246,248,250,.97),rgba(246,248,250,.88) 30%,rgba(246,248,250,.08) 66%)}
+.hero-slide-color .hero-content .eyebrow{color:#626b73}
+.hero-slide-color .hero-content h2{font:650 clamp(52px,6vw,86px)/1.14 SUIT,Arial,sans-serif;letter-spacing:-.055em;margin:0 0 20px;word-break:keep-all}
+.hero-slide-color .hero-content p{color:#4f5963}
+.home-carousel.is-light .hero-counter{color:#1f2937;text-shadow:none}
+.home-carousel.is-light .hero-counter-rule{background:rgba(31,41,55,.45)}
+.home-carousel.is-light .hero-arrows button{color:#1f2937;border-color:rgba(31,41,55,.5);background:rgba(255,255,255,.82)}
+.home-carousel.is-light .hero-arrows button:hover{background:#fff;border-color:#1f2937}
+.home-carousel.is-light .hero-arrows button:focus-visible{outline-color:#1f2937}
+@media(max-width:700px){
+ .hero-slide-color .hero-backdrop{height:310px;background-position:75% top}
+ .hero-slide-color .hero-backdrop:after{background:linear-gradient(0deg,#f6f8fa,rgba(246,248,250,0) 48%)}
+ .hero-slide-color .hero-content{padding-top:310px}
+ .hero-slide-color .hero-content h2{font-size:clamp(36px,9.5vw,50px);line-height:1.12;margin-bottom:14px}
+ .hero-slide-color .hero-content .eyebrow{margin-bottom:12px}
+ .hero-slide-color .hero-content p{margin-bottom:18px;max-width:340px}
+}

@@ -1,0 +1,45 @@
+/* One inquiry form, with a native accessible category selector. */
+.contact-page .sr-lead{max-width:800px}
+.contact-page .sr-contact-layout{grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:100px}
+.contact-page .sr-notice{background:#f5f6f7;border-left:2px solid #b8c1c8;color:#626b73;font-size:13px;padding:15px 18px}
+.contact-page .sr-notice[hidden]{display:none}
+.contact-types{border:0;padding:0;margin:0;min-width:0}
+.contact-types legend{font-size:13px;font-weight:650;margin-bottom:12px;padding:0}
+.contact-type-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.contact-page .contact-type-options .contact-kind{position:relative;display:block;margin:0;cursor:pointer}
+.contact-kind input{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden;clip-path:inset(50%);padding:0;border:0}
+.contact-kind span{display:flex;justify-content:center;align-items:center;min-height:46px;padding:10px 13px;border:1px solid #d9dfe4;background:#fff;font-size:13px;font-weight:550;line-height:1.5;color:#626b73;transition:background-color .2s,border-color .2s,color .2s}
+.contact-kind:hover span{border-color:#9ca8b2;color:#1f2937}
+.contact-kind input:checked+span{background:#1f2937;color:#fff;border-color:#1f2937}
+.contact-kind input:focus-visible+span{outline:2px solid #5b9fe6;outline-offset:3px}
+.contact-page .contact-type-help{font-size:12px;color:#707981;line-height:1.75;margin:13px 0 10px;min-height:42px}
+.contact-page .sr-contact-form>label{font-size:13px}
+.contact-page .sr-contact-form>input,.contact-page .sr-contact-form>textarea{width:100%;font:inherit;font-size:15px;line-height:1.6;border:1px solid #d9dfe4;border-radius:0;padding:12px 13px;background:#fff;color:#1f2937}
+.contact-page .sr-contact-form>textarea{resize:vertical;min-height:160px}
+.contact-page .sr-contact-form>.sr-button{background:#1f2937;color:#fff;cursor:pointer}
+.contact-page .sr-contact-form>.sr-button:hover:not(:disabled){background:#47535c}
+.contact-page .sr-contact-form>.sr-button:disabled{background:#e9ecef;color:#626b73;border-color:#e9ecef;cursor:not-allowed}
+.contact-page .sr-form-status{color:#626b73;min-height:22px}
+.contact-page .contact-social-info{border-top:1px solid #e4e5e5;margin-top:40px;padding-top:28px}
+.contact-page .contact-social-info .sr-eyebrow{margin-bottom:13px}
+.contact-page .contact-social-info h3{font-size:21px}
+.contact-page .contact-social-info:focus-visible{outline:2px solid #5b9fe6;outline-offset:6px}
+.footer .social-note{gap:10px 15px}
+.footer .social-note>a{display:inline-block;font-size:11px;text-decoration:underline;text-decoration-color:#718190;text-underline-offset:4px;padding:4px 0;transition:color .2s,text-decoration-color .2s}
+.footer .social-note>a:hover{color:#fff;text-decoration-color:#fff}
+.footer .social-note small[hidden]{display:none}
+.social-link-toast{position:fixed;z-index:200;left:50%;bottom:26px;transform:translate(-50%,12px);opacity:0;pointer-events:none;max-width:calc(100% - 36px);width:max-content;background:#1f2937;color:#fff;border:1px solid #5b6773;padding:14px 20px;font-size:13px;line-height:1.6;box-shadow:0 5px 25px rgba(15,23,42,.12);transition:opacity .2s,transform .2s}
+.social-link-toast.is-visible{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1050px){.contact-page .sr-contact-layout{gap:55px}}
+@media(max-width:700px){
+ .contact-page .sr-contact-layout{grid-template-columns:1fr;gap:40px}
+ .contact-type-options{gap:9px}
+ .contact-kind span{font-size:12px;padding:10px;min-height:46px}
+ .contact-page .sr-contact-form>input,.contact-page .sr-contact-form>textarea{font-size:16px}
+ .contact-page .contact-type-help{margin-bottom:20px}
+ .contact-page .sr-contact-form>.sr-button{width:100%}
+ .contact-page .contact-social-info{margin-top:30px;padding-top:25px}
+ .footer .social-note>a{font-size:12px;padding:10px 0;min-height:44px}
+ .social-link-toast{bottom:18px;font-size:12px;padding:12px 16px}
+}
+@media(prefers-reduced-motion:reduce){.contact-kind span,.social-link-toast,.footer .social-note>a{transition:none}}

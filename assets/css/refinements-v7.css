@@ -1,0 +1,114 @@
+/* Shared catalogue rhythm and restrained, accessible motion. */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.product-tile figure img,.news-tile figure img,.imported-layout .sr-game-tile img,.shop-game-link img{transition:transform .35s cubic-bezier(.22,.61,.36,1)}
+.product-tile:focus-visible figure img,.news-tile:focus-visible figure img{transform:scale(1.025)}
+.news-tile:focus-visible,.shop-product-link:focus-visible,.shop-game-link:focus-visible{outline:2px solid #5b9fe6;outline-offset:6px}
+
+/* Manual home carousel. The initial slide remains usable without JavaScript. */
+.home-carousel{touch-action:pan-y;overflow:clip}
+.home-carousel:focus-visible{outline:2px solid #5b9fe6;outline-offset:-5px}
+.hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility .45s ease}
+.hero-slide.is-active{opacity:1;visibility:visible;pointer-events:auto;z-index:1}
+.home-carousel .hero-content{padding-bottom:0}
+.hero-slide-hamster .hero-backdrop{background-position:center 48%;filter:none}
+.hero-slide-hamster .hero-backdrop:after{background:linear-gradient(90deg,rgba(15,24,20,.82),rgba(15,24,20,.35) 55%,rgba(15,24,20,.08)),linear-gradient(0deg,rgba(15,24,20,.25),transparent 45%)}
+.hero-slide-hamster .hero-content h2{font:650 clamp(52px,6vw,86px)/1.14 'SUIT',Arial,sans-serif;letter-spacing:-.055em;margin:0 0 20px;word-break:keep-all}
+.hero-controls{position:absolute;z-index:3;left:0;right:0;bottom:34px;display:flex;align-items:center;justify-content:flex-end;gap:30px;pointer-events:none}
+.hero-controls[hidden]{display:none}
+.hero-counter{display:flex;align-items:center;gap:13px;font-size:13px;font-weight:650;font-variant-numeric:tabular-nums;text-shadow:0 1px 5px #16221a}
+.hero-counter-rule{height:1px;width:42px;background:rgba(255,255,255,.55)}
+.hero-counter-total{opacity:.65}
+.hero-arrows{display:flex;gap:10px;pointer-events:auto}
+.hero-arrows button{display:grid;place-items:center;width:46px;height:46px;padding:11px;color:#fff;background:rgba(14,23,27,.35);border:1px solid rgba(255,255,255,.65);border-radius:50%;transition:background-color .2s,border-color .2s}
+.hero-arrows button:hover{background:rgba(14,23,27,.7);border-color:#fff}
+.hero-arrows button:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.hero-arrows svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.4}
+
+/* Shop follows Games: white page, shared heading and two-column catalogue. */
+.shop-page,.shop-product-page{background:#fff}
+.shop-catalog{padding-bottom:90px}
+.shop-catalog-image{position:relative;overflow:hidden;background:#f4f5f6}
+.shop-page .shop-catalog-image img{object-fit:cover}
+.shop-product-link{display:block}
+.shop-product-link:hover img,.shop-product-link:focus-visible img,.shop-game-link:hover img,.shop-game-link:focus-visible img{transform:scale(1.025)}
+.shop-page .shop-tile-title{font-size:26px}
+.shop-page .shop-card-status{margin:0;top:18px;left:18px;color:#59616a;font-size:10px;line-height:1.5;background:rgba(255,255,255,.95);font-weight:650;padding:7px 10px}
+.shop-page .shop-catalog-note{margin-top:44px;padding-top:22px;border-top:1px solid #e4e5e5;color:#707981;font-size:13px}
+.shop-page .shop-end{background:#fff;border-top:1px solid #e4e5e5;padding:60px 0 80px}
+.shop-page .shop-end h2{font-size:28px}
+.shop-page .shop-end p{margin-top:12px}
+.shop-page .shop-end .eyebrow{margin-bottom:14px}
+
+/* Merchandise detail: image and essentials, then editorial product information. */
+.shop-breadcrumb{padding-top:35px}
+.shop-breadcrumb .breadcrumb{display:flex;flex-wrap:wrap;gap:12px;line-height:1.8;margin:0 0 38px}
+.shop-product-hero{grid-template-columns:1fr 1fr;gap:7%;padding-bottom:86px}
+.shop-product-hero .gallery-stage{aspect-ratio:1.08;background:#f4f5f6}
+.shop-product-hero .gallery-stage>img{width:100%;height:100%;object-fit:contain}
+.shop-product-hero .image-note{font-size:12px;color:#707981;line-height:1.6;margin-top:13px}
+.shop-product-hero .detail-copy{padding-top:25px}
+.shop-product-hero .detail-copy h1{font-size:clamp(38px,4vw,60px);font-weight:600;letter-spacing:-.05em;line-height:1.14;margin:0 0 19px}
+.shop-product-hero .detail-copy .lead{font-size:17px;color:#626b73;margin:0 0 22px}
+.shop-product-status{display:inline-block;font-size:11px;font-weight:650;color:#626b73;border:1px solid #dfe3e6;padding:6px 10px}
+.shop-product-hero .detail-copy dl{margin:30px 0}
+.shop-product-hero .detail-copy dl div{grid-template-columns:120px 1fr;padding:15px 0}
+.shop-product-hero .detail-copy dt{color:#707981;font-size:13px}
+.shop-product-hero .detail-copy dd{font-size:14px;font-weight:500}
+.shop-product-hero .purchase{max-width:none;font-size:14px;min-height:52px;font-weight:650}
+.shop-product-hero .purchase:disabled{cursor:not-allowed;transform:none;color:#626b73;background:#e9ecef}
+.shop-product-hero .fineprint{font-size:12px;color:#707981;line-height:1.6;margin-top:13px}
+.shop-product-page .shop-product-description{padding-bottom:0}
+.shop-product-description .sr-editorial-row{gap:7%;grid-template-columns:1fr 1fr;padding:48px 0;border-top:1px solid #e4e5e5}
+.shop-product-description .sr-editorial-row h2{font-size:34px;line-height:1.3;max-width:none}
+.shop-product-description .sr-editorial-row p{font-size:15px;color:#626b73;line-height:1.9;margin:0 0 18px}
+.shop-product-description .sr-editorial-row .sr-eyebrow{font-size:11px;margin:0 0 18px}
+.shop-specs{margin:0}
+.shop-specs>div{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:17px 0;border-bottom:1px solid #e4e5e5}
+.shop-specs>div:first-child{padding-top:0}
+.shop-specs dt,.shop-specs dd{font-size:14px;color:#626b73;margin:0}
+.shop-specs dd{color:#252b2f}
+.shop-related-game{padding-top:38px;padding-bottom:100px}
+.shop-game-link{display:grid;grid-template-columns:180px 1fr 40px;align-items:center;gap:32px;border-top:1px solid #e4e5e5;border-bottom:1px solid #e4e5e5;padding:24px 0}
+.shop-game-link figure{aspect-ratio:1.5;overflow:hidden}
+.shop-game-link img{width:100%;height:100%;object-fit:cover}
+.shop-game-link h3{font-size:25px}
+.shop-game-link .sr-eyebrow{font-size:10px;margin:0 0 10px}
+.shop-game-link p:not(.sr-eyebrow){font-size:14px;color:#707981;margin-top:9px}
+.shop-product-page .shop-back{margin-top:32px}
+.lightbox-close:focus-visible,.gallery-zoom:focus-visible{outline:2px solid #5b9fe6;outline-offset:4px}
+@media(max-width:1050px){.home-carousel .hero-content{padding-top:165px}.hero-slide-hamster .hero-content{padding-top:clamp(100px,calc(18vw - 26px),165px)}.shop-product-hero{gap:5%}.shop-product-hero .detail-copy{padding-top:5px}}
+@media(max-width:700px){
+ .home-carousel{height:600px}
+ .home-carousel .hero-content{padding-top:245px;padding-bottom:0}
+ .hero-slide-hamster .hero-content{padding-top:225px}
+ .hero-slide-hamster .hero-content h2{font-size:clamp(36px,9.5vw,50px);line-height:1.12;margin-bottom:18px}
+ .hero-slide-hamster .hero-backdrop{background-position:58% center}
+ .hero-controls{bottom:24px;gap:22px}
+ .hero-counter{font-size:12px;gap:10px}
+ .hero-counter-rule{width:30px}
+ .hero-arrows button{width:44px;height:44px}
+ .shop-catalog{padding-bottom:55px}
+ .shop-page .shop-tile-title{font-size:25px}
+ .shop-page .shop-card-status{top:12px;left:12px;font-size:9px}
+ .shop-page .shop-catalog-note{margin-top:32px;font-size:12px}
+ .shop-page .shop-end{padding:40px 0 55px}
+ .shop-page .shop-end h2{font-size:25px}
+ .shop-breadcrumb{padding-top:23px}
+ .shop-breadcrumb .breadcrumb{margin-bottom:25px;font-size:10px;gap:9px}
+ .shop-product-hero{grid-template-columns:1fr;gap:30px;padding-bottom:45px}
+ .shop-product-hero .detail-copy{padding-top:0}
+ .shop-product-hero .detail-copy h1{font-size:40px}
+ .shop-product-hero .detail-copy .lead{font-size:15px}
+ .shop-product-hero .detail-copy dl div{grid-template-columns:105px 1fr}
+ .shop-product-description .sr-editorial-row{grid-template-columns:1fr;gap:22px;padding:32px 0}
+ .shop-product-description .sr-editorial-row h2{font-size:28px}
+ .shop-product-description .sr-editorial-row p{font-size:14px}
+ .shop-specs dt,.shop-specs dd{font-size:13px}
+ .shop-related-game{padding-top:25px;padding-bottom:60px}
+ .shop-game-link{grid-template-columns:85px 1fr 30px;gap:15px;padding:19px 0}
+ .shop-game-link h3{font-size:20px}
+ .shop-game-link p:not(.sr-eyebrow){font-size:12px}
+ .shop-game-link .sr-circle-link{width:30px;height:30px;font-size:17px}
+ .shop-game-link figure{aspect-ratio:1}
+}
+@media(prefers-reduced-motion:reduce){.hero-slide,.product-tile figure img,.news-tile figure img,.imported-layout .sr-game-tile img,.shop-game-link img{transition:none!important}}
