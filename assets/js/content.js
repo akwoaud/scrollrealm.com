@@ -1,72 +1,75 @@
-/* Change titles, summaries and milestones here. News URLs use stable IDs. */
+/* News URLs use stable IDs. */
 window.SCROLLREALM_CONTENT = {
   "news": [
     {
       "id": "building-caelterra-world-lore-deep-dive",
-      "title": "Building Caelterra: World Lore Deep Dive",
+      "title": "Caelterra territory cards",
       "category": "Dev Update",
-      "date": "2026-05-28",
-      "intro": "Explore the ancient realms, faction conflicts, and mythic forces that shape the world of Caelterra.",
-      "title_ko": "CAELTERRA 세계관 제작 이야기",
+      "intro": "See the artwork for the Orpheon and Belassion territory cards.",
+      "title_ko": "카엘테라 영지 카드",
       "category_ko": "개발 소식",
-      "intro_ko": "CAELTERRA의 고대 지역, 세력 간 갈등, 세계를 형성하는 신화적 힘을 소개합니다.",
-      "img": "aurelian.webp"
+      "intro_ko": "오르페온과 벨라시온 영지 카드에 쓰인 일러스트를 살펴보세요.",
+      "img": "orpheon.webp",
+      "body_ko": "오르페온과 벨라시온은 카엘테라의 영지 카드에 등장합니다. 별을 관측하는 오르페온의 야경과 용암이 흐르는 벨라시온의 요새를 카드 일러스트에서 확인할 수 있습니다.",
+      "body_en": "Orpheon and Belassion appear on Caelterra territory cards. The illustrations show Orpheon’s observatory at night and Belassion’s fortress above a river of lava."
     },
     {
       "id": "card-preview-shadow-courts",
-      "title": "Card Preview: Meet the Shadow Courts",
+      "title": "Inside the Knight card set",
       "category": "Cards",
-      "date": "2026-05-28",
-      "intro": "A first look at intrigue-focused cards from the Shadow Courts faction.",
-      "title_ko": "카드 프리뷰: 그림자 궁정",
+      "intro": "See how the skill and item cards support Karden Morvan.",
+      "title_ko": "기사 카드 세트 구성",
       "category_ko": "카드",
-      "intro_ko": "비밀과 책략을 중심으로 한 그림자 궁정 세력의 카드를 먼저 소개합니다.",
-      "img": "shadow.webp"
+      "intro_ko": "카르덴 모르반과 함께 쓰는 스킬·아이템 카드 구성을 소개합니다.",
+      "img": "karden-morvan.webp",
+      "body_ko": "기사 세트는 카르덴 모르반과 레오가드를 중심으로 구성했습니다. 스킬 30장과 아이템 20장에는 근접 공격, 방어, 회복에 쓰는 카드가 들어갑니다. 전체 52장에는 캐릭터와 영지 카드 각 1장이 포함됩니다.",
+      "body_en": "The Knight set pairs Karden Morvan with Leoguard. Its 30 skill cards and 20 item cards support melee attacks, defence, and recovery. One character and one territory card bring the set to 52 cards."
     },
     {
       "id": "trpg-quickstart-guide-in-development",
-      "title": "TRPG Quickstart Guide in Development",
+      "title": "Preparing for your first game of Caelterra",
       "category": "TRPG",
-      "date": "2026-05-28",
-      "intro": "A preview of character creation, core actions, and introductory campaign structure.",
-      "title_ko": "TRPG 퀵스타트 가이드 개발 소식",
+      "intro": "Find out which cards and rules you need for your first game.",
+      "title_ko": "카엘테라 첫 플레이 준비",
       "category_ko": "TRPG",
-      "intro_ko": "캐릭터 제작, 핵심 행동, 입문 캠페인의 기본 구조를 소개합니다.",
-      "img": "rulebook.webp"
+      "intro_ko": "첫 플레이에 필요한 카드와 자료를 확인하세요.",
+      "img": "dragon.webp",
+      "body_ko": "캐릭터와 영지 카드를 확인하고 스킬과 아이템으로 덱을 준비하세요. 규칙을 처음 읽는다면 게임 준비, 턴 진행, 이동과 전투부터 살펴보세요. 간편 규칙과 퀵스타트의 공개 여부는 자료 다운로드 페이지에서 확인할 수 있습니다.",
+      "body_en": "Start with your character and territory, then prepare your deck with skill and item cards. If you’re new to the rules, begin with setup, turns, movement, and combat. Check Downloads for the availability of quick rules and the quickstart guide."
     }
   ],
   "milestones": [
     {
-      "en": "Alpha Preview",
-      "description_en": "Early access to Caelterra TCG previews and TRPG quickstart material.",
-      "ko": "알파 프리뷰",
-      "description_ko": "CAELTERRA TCG 카드 프리뷰와 TRPG 퀵스타트 자료를 공개할 예정입니다.",
-      "status_en": "Planning in progress",
-      "status_ko": "일정 조율 중"
+      "ko": "첫 플레이 자료",
+      "en": "First-game guides",
+      "description_ko": "게임 준비와 기본 턴 진행을 설명하는 간편 규칙과 퀵스타트입니다.",
+      "description_en": "Quick rules and a quickstart covering setup and turns.",
+      "status_ko": "일정 미정",
+      "status_en": "Date to be confirmed"
     },
     {
-      "en": "Starter Set Launch",
-      "description_en": "Starter Set release window for introductory TCG play.",
-      "ko": "스타터 세트 출시",
-      "description_ko": "TCG를 처음 시작할 수 있는 스타터 세트를 준비하고 있습니다.",
-      "status_en": "Planning in progress",
-      "status_ko": "일정 조율 중"
+      "ko": "스타터 세트",
+      "en": "Starter sets",
+      "description_ko": "기사·법사·요정별 입문 카드 구성입니다.",
+      "description_en": "Introductory card sets for the Knight, Mage, and Elf.",
+      "status_ko": "일정 미정",
+      "status_en": "Date to be confirmed"
     },
     {
-      "en": "Booster Wave I",
-      "description_en": "The first booster wave expands deck-building and faction strategy.",
-      "ko": "부스터 1차",
-      "description_ko": "첫 부스터 시리즈로 덱 구성과 세력 전략을 확장할 계획입니다.",
-      "status_en": "Planning in progress",
-      "status_ko": "일정 조율 중"
+      "ko": "부스터 팩",
+      "en": "Booster packs",
+      "description_ko": "스킬과 아이템 선택지를 늘리는 카드 확장 제품입니다.",
+      "description_en": "Card expansions for more skill and item options.",
+      "status_ko": "일정 미정",
+      "status_en": "Date to be confirmed"
     },
     {
-      "en": "TRPG Core Rulebook",
-      "description_en": "Full core rulebook release for campaign-ready play.",
-      "ko": "TRPG 코어 룰북",
-      "description_ko": "캠페인 플레이를 위한 코어 룰북을 준비하고 있습니다.",
-      "status_en": "Planning in progress",
-      "status_ko": "일정 조율 중"
+      "ko": "코어 룰북",
+      "en": "Core Rulebook",
+      "description_ko": "게임 준비부터 전투와 퀘스트까지 다루는 규칙서입니다.",
+      "description_en": "A rules reference covering setup, combat, and quests.",
+      "status_ko": "일정 미정",
+      "status_en": "Date to be confirmed"
     }
   ]
 };
