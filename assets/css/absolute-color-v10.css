@@ -1,5 +1,6 @@
 /* Three games share one editorial catalogue row on desktop. */
 .games-catalog-three .sr-game-grid,.home-games-three .two-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.games-catalog-three .imported-layout{padding-bottom:clamp(64px,8vw,112px)}
 .games-catalog-three .sr-game-line{align-items:flex-start;gap:15px}
 .games-catalog-three .sr-game-line h3{font-size:25px}
 .games-catalog-three .sr-circle-link{width:36px;height:36px;margin-top:20px}

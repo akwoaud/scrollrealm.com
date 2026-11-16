@@ -11,11 +11,20 @@
  }
  const shop=window.SCROLLREALM_SHOP_URLS||{};
  const isKorean = document.documentElement.lang === 'ko';
+ const shopUrl = key => {
+   const url = shop[key];
+   return typeof url === 'string' && /^https:\/\/(?:[a-z0-9-]+\.)*(?:naver\.com|naver\.me)(?:\/|$)/i.test(url) ? url : '';
+ };
+ document.querySelectorAll('[data-shop-status]').forEach(status => {
+   if (shopUrl(status.dataset.shopStatus)) status.textContent = isKorean ? '판매 중' : 'Available';
+ });
+ document.querySelectorAll('[data-shop-draft]').forEach(detail => {
+   if (shopUrl(detail.dataset.shopDraft)) detail.hidden = true;
+ });
  document.querySelectorAll('[data-shop]').forEach(button => {
-   const url = shop[button.dataset.shop];
-   const available = typeof url === 'string' && /^https:\/\/(?:[a-z0-9-]+\.)*(?:naver\.com|naver\.me)(?:\/|$)/i.test(url);
-   button.disabled = !available;
-   if (!available) {
+   const url = shopUrl(button.dataset.shop);
+   button.disabled = !url;
+   if (!url) {
      button.setAttribute('aria-disabled', 'true');
      return;
    }
@@ -32,7 +41,9 @@
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  document.querySelectorAll('[data-milestones]').forEach(root=>{const lang=root.dataset.lang;const v=data.milestones;if(!Array.isArray(v))return;root.innerHTML=v.map((r,i)=>`<article class="milestone"><span class="step">${String(i+1).padStart(2,'0')}</span><div><div class="small-meta">${esc(lang==='ko'?r.status_ko:r.status_en)}</div><h3>${esc(lang==='ko'?r.ko:r.en)}</h3><p>${esc(lang==='ko'?r.description_ko:r.description_en)}</p></div></article>`).join('');});
  if (!Array.isArray(data.news)) return;
- document.querySelectorAll('[data-news-grid]').forEach(root => {
+ const newsGrids = document.querySelectorAll('[data-news-grid]');
+ const newsArticles = document.querySelectorAll('[data-article-id]');
+ newsGrids.forEach(root => {
    const prefix = root.dataset.linkPrefix || '';
    const assets = root.dataset.assetPrefix || '';
    root.innerHTML = data.news.map(story => {
@@ -40,14 +51,14 @@
      const intro = isKorean ? story.intro_ko : story.intro;
      const category = isKorean ? story.category_ko : story.category;
      const date = story.date ? ` · <time datetime="${esc(story.date)}">${esc(story.date)}</time>` : '';
-     return `<a class="news-tile" href="${esc(prefix + 'news/' + story.id + '/index.html')}">
+     return `<a class="news-tile" data-news-id="${esc(story.id)}" href="${esc(prefix + 'news/' + story.id + '/index.html')}">
        <figure class="dynamic-news-photo"><img alt="" src="${esc(assets + story.img)}" loading="lazy"></figure>
        <div class="small-meta">${esc(category)}${date}</div><h3>${esc(title)}</h3><p>${esc(intro)}</p>
      </a>`;
    }).join('');
  });
 
- document.querySelectorAll('[data-article-id]').forEach(article => {
+ newsArticles.forEach(article => {
    const story = data.news.find(entry => entry.id === article.dataset.articleId);
    if (!story) return;
    const category = isKorean ? story.category_ko : story.category;
@@ -62,4 +73,44 @@
      if (element && typeof value === 'string' && value.trim()) element.textContent = value;
    }
  });
+
+ const newsSource = document.querySelector('main[data-news-source]');
+ if (newsSource) {
+   syncHomeNews(newsSource.dataset.newsSource).catch(() => {
+     // The page already shows the saved news copy if the homepage is unavailable.
+   });
+ }
+
+ async function syncHomeNews(source) {
+   const response = await fetch(source, { cache: 'no-cache' });
+   if (!response.ok) return;
+   const home = new DOMParser().parseFromString(await response.text(), 'text/html');
+   const previews = new Map();
+   for (const row of home.querySelectorAll('.sr-news-list a.sr-news-row')) {
+     const id = row.getAttribute('href')?.match(/(?:^|\/)news\/([a-z0-9-]+)\/(?:index\.html)?$/)?.[1];
+     if (!id) continue;
+     previews.set(id, {
+       title: row.querySelector('h3')?.textContent.trim(),
+       intro: row.querySelector('p')?.textContent.trim(),
+     });
+   }
+   for (const root of newsGrids) {
+     for (const tile of root.querySelectorAll('[data-news-id]')) {
+       applyPreview(tile, previews.get(tile.dataset.newsId), 'h3', 'p');
+     }
+   }
+   for (const article of newsArticles) {
+     const preview = previews.get(article.dataset.articleId);
+     applyPreview(article, preview, '.article-header h1', '.article-header p');
+     if (preview?.title) document.title = preview.title + ' | SCROLL REALM';
+   }
+ }
+
+ function applyPreview(root, preview, titleSelector, introSelector) {
+   if (!preview) return;
+   const title = root.querySelector(titleSelector);
+   const intro = root.querySelector(introSelector);
+   if (title && preview.title) title.textContent = preview.title;
+   if (intro && preview.intro) intro.textContent = preview.intro;
+ }
 })();

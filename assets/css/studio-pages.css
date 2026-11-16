@@ -1,0 +1,215 @@
+.scrollrealm-brand-art {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: clamp(220px, 37vw, 480px);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 52% 54%, #34404e 0%, transparent 62%),
+    linear-gradient(135deg, #151f2a, #202d3b 60%, #111923);
+}
+
+.scrollrealm-brand-art::before {
+  position: absolute;
+  inset: clamp(10px, 2vw, 24px);
+  border: 1px solid #d6c2a157;
+  content: "";
+}
+
+.scrollrealm-brand-orbits {
+  position: absolute;
+  z-index: -1;
+  width: 78%;
+  aspect-ratio: 2.75;
+  transform: rotate(-16deg);
+  border: 1px solid #d6c2a13b;
+  border-radius: 50%;
+}
+
+.scrollrealm-brand-orbits::before,
+.scrollrealm-brand-orbits::after {
+  position: absolute;
+  inset: -24% 5%;
+  transform: rotate(32deg);
+  border: 1px solid #d6c2a13b;
+  border-radius: inherit;
+  content: "";
+}
+
+.scrollrealm-brand-orbits::after {
+  inset: -48% 13%;
+  transform: rotate(-23deg);
+}
+
+.scrollrealm-brand-art .scrollrealm-brand-wordmark {
+  width: min(63%, 590px);
+  height: auto;
+}
+
+.studio-game-list {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.studio-game-list li,
+.studio-game-list p {
+  margin: 0;
+}
+
+#studio-contact {
+  margin-bottom: clamp(36px, 7vw, 90px);
+}
+
+#studio-contact a {
+  margin-top: 12px;
+}
+
+.release-content {
+  padding-block: 14px clamp(45px, 7vw, 96px);
+}
+
+.release-status {
+  padding: clamp(18px, 3vw, 30px);
+  border-inline-start: 3px solid #aa9067;
+  background: #f4f0e9;
+  color: #35414b;
+}
+
+.release-status p {
+  margin: 0;
+}
+
+.release-status p + p {
+  margin-top: 6px;
+}
+
+.release-grid,
+.shop-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 26px);
+  margin-top: 24px;
+}
+
+.release-card,
+.shop-list-card {
+  border: 1px solid #dbdcd7;
+  background: #fff;
+}
+
+.release-card,
+.shop-list-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(18px, 2.4vw, 30px);
+}
+
+.release-card h2 {
+  margin: 0;
+  font-size: clamp(23px, 2.1vw, 30px);
+}
+
+.release-card p {
+  margin-block: 12px 20px;
+}
+
+.release-card a,
+.shop-list-body a {
+  margin-top: auto;
+}
+
+.shop-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.shop-list-section {
+  padding-block: clamp(26px, 4vw, 54px);
+  border-top: 1px solid #dbdcd7;
+  scroll-margin-top: 110px;
+}
+
+.shop-list-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-list-card figure {
+  overflow: hidden;
+  aspect-ratio: 1.55;
+  background: #eeede8;
+}
+
+.shop-list-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-list-card .shop-catalog-image img {
+  object-fit: contain;
+}
+
+.shop-list-body {
+  flex: 1;
+}
+
+.shop-list-body p {
+  margin: 10px 0 14px;
+}
+
+.shop-list-body .shop-list-category {
+  margin: 0 0 8px;
+  color: #59616a;
+  font-size: .83rem;
+}
+
+.shop-list-body .shop-list-status {
+  margin: 0 0 12px;
+  color: #59616a;
+  font-size: .85rem;
+  font-weight: 650;
+}
+
+.shop-merch-group {
+  margin-top: clamp(32px, 5vw, 64px);
+}
+
+.shop-merch-group .shop-list-body h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.shop-list-card .shop-merch-image img {
+  object-fit: contain;
+}
+
+.shop-merch-single .shop-merch-image {
+  background: #e8e8e4;
+  padding: 14px;
+}
+
+.shop-merch-action {
+  margin-top: auto;
+}
+
+.shop-merch-action button:disabled {
+  border-color: #d9d9d3;
+  background: #f2f1ee;
+  color: #595e62;
+}
+
+@media (max-width: 760px) {
+  .release-grid,
+  .shop-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
