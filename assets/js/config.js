@@ -3,6 +3,14 @@ window.SCROLLREALM_SHOP_URLS = {
   hamster: "",
   absoluteColor: "", // 절대색감 game.
   hamsterHouse: "", // Hamster House merchandise (Shop).
+  hamsterTunnel: "",
+  hamsterBridge: "",
+  tabletopDice: "",
+  tabletopPawns: "",
+  hamsterFigure: "",
+  singleKarden: "",
+  singleIronBreaker: "",
+  singleStarshardRing: "",
   starter: "",
   booster: "",
   rulebook: ""
